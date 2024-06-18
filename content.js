@@ -63,31 +63,6 @@ function sortTable() {
 
 
 
-  function createSearchBox_old() {
-    var searchBox = document.createElement("input");
-    searchBox.setAttribute('type', 'text');
-    searchBox.setAttribute('id', 'filter-scheduled-pipelines');
-    searchBox.setAttribute('placeholder', 'Filter pipelines');
-    searchBox.setAttribute('class', 'gl-filtered-search-token-segment-input');
-
-    var searchContainer = document.createElement("div");
-    searchContainer.setAttribute('class', 'input-group gl-search-box-by-click gl-display-flex gl-flex-grow-1 gl-mr-4');
-    searchContainer.appendChild(searchBox);
-
-    
-    var searchHeader = document.createElement("div");
-    searchHeader.setAttribute('class', 'row-content-block gl-display-flex gl-flex-grow-1 gl-border-b-0');
-    searchHeader.appendChild(searchContainer);
-
-
-    let mainContent = document.querySelectorAll('[class="content"]')[0];
-    let flashContainer = document.querySelectorAll('[data-testid="flash-container"]')[0];
-    mainContent.insertBefore(searchHeader, flashContainer);
-
-    searchBox.addEventListener("change", filterTable);
-    searchBox.addEventListener("keyup", filterTable);
-
-  }
   function createSearchBox() {
     var htmlFilterPanel = `
     <div class="row-content-block gl-display-flex gl-flex-grow-1 gl-border-b-0">

@@ -1,13 +1,16 @@
 {
     "manifest_version": 3,
    
-    "name": "Sort Gitlab Scheduled Pipelines Table",
+    "name": "SPILTER - Scheduled Pipelines filter",
     "version": "1.0.0",
     "description": "Sorts the table of scheduled pipelines in Gitlab",
    
     "content_scripts": [{
       "js": ["content.js"],
-      "matches": ["https://*/*/-/pipeline_schedules?*","https://*/*/-/pipeline_schedules"]
+      "matches": [
+        "https://*/*/-/pipeline_schedules?*",
+        "https://*/*/-/pipeline_schedules"
+      ]
     }],
     "icons" : {
       "16": "images/icon-16.png",
